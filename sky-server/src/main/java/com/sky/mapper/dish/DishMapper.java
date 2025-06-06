@@ -52,4 +52,10 @@ public interface DishMapper {
      * @param ids
      */
     void deleteByIds(List<Long> ids);
+
+    /**
+     * 根据dishId更新菜品表对应菜品基本信息
+     * @param dish
+     */
+    void update(Dish dish);
 }
