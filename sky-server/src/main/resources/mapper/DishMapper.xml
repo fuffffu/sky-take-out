@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sky.mapper.DishMapper">
+
+    <!-- 插入一条菜品数据，支持主键回显 -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into dish
+        (name, category_id, price, image, description, create_time, update_time, create_user, update_user, status)
+        values
+            (#{name}, #{categoryId}, #{price}, #{image}, #{description},
+             #{createTime}, #{updateTime}, #{createUser}, #{updateUser}, #{status})
+    </insert>
+
+    <!-- 批量删除id集合的菜品 -->
+    <delete id="deleteByIds">
+        delete from dish where id in
+        <foreach collection="ids" open="(" close=")" separator="," item="id">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>

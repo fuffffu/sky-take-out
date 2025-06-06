@@ -1,4 +1,4 @@
-package com.sky.mapper.mapper;
+package com.sky.mapper.dish;
 
 import com.github.pagehelper.Page;
 import com.sky.dto.CategoryPageQueryDTO;

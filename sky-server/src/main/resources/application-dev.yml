@@ -7,4 +7,7 @@ sky:
     username: root
     password: root
   alioss:
-    endpoint: oss-cn
+    endpoint: oss-cn-beijing.aliyuncs.com
+    access-key-id: WOXIAXIEDE
+    access-key-secret: WOXIAXIEDE
+    bucket-name: sky-itcast
