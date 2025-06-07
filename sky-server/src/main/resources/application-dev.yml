@@ -11,3 +11,7 @@ sky:
     access-key-id: WOXIAXIEDE
     access-key-secret: WOXIAXIEDE
     bucket-name: sky-itcast
+  redis:
+    host:localhost
+    port:6379
+    password:123456
