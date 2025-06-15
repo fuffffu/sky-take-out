@@ -19,5 +19,6 @@ public interface UserMapper {
      * 插入用户
      * @param user
      */
-    void insert(User user);
+    void
+    insert(User user);
 }
