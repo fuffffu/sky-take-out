@@ -12,6 +12,9 @@ sky:
     access-key-secret: WOXIAXIEDE
     bucket-name: sky-itcast
   redis:
-    host:localhost
-    port:6379
-    password:123456
+    host: localhost
+    port: 6379
+    password: 123456
+  wechat:
+    appid: 12345abc
+    secret: 54321abc
