@@ -1,0 +1,14 @@
+<select id="list" parameterType="ShoppingCart" resultType="ShoppingCart">
+    SELECT * FROM shopping_cart
+    <where>
+        <if test="userId != null">
+            AND user_id = #{userId}
+        </if>
+        <if test="dishId != null">
+            AND dish_id = #{dishId}
+        </if>
+        <if test="setmealId != null">
+            AND setmeal_id = #{setmealId}
+        </if>
+    </where>
+</select>
