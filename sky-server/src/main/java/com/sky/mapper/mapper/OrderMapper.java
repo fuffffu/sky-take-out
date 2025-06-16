@@ -1,8 +1,13 @@
 package com.sky.mapper.mapper;
 
+import com.sky.dto.GoodsSalesDTO;
 import com.sky.entity.Orders;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface OrderMapper {
@@ -26,4 +31,14 @@ public interface OrderMapper {
     void update(Orders orders);
 
     Orders getById(Long id);
+
+    Double sumByMap(Map<String, Object> map);
+
+    Integer countByMap(Map<String, Object> map);
+
+    List<GoodsSalesDTO> getSalesTop10(LocalDateTime beginTime, LocalDateTime endTime);
+
+    Double sumTurnover(LocalDateTime begin, LocalDateTime end);
+
+    Integer countOrders(LocalDateTime begin, LocalDateTime end, Object o);
 }

@@ -4,6 +4,9 @@ import com.sky.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
+import java.time.LocalDateTime;
+import java.util.Map;
+
 @Mapper
 public interface UserMapper {
 
@@ -23,4 +26,8 @@ public interface UserMapper {
     insert(User user);
 
     User getById(Long userId);
+
+    Integer countByMap(Map<String, Object> map);
+
+    Integer countNewUsers(LocalDateTime begin, LocalDateTime end);
 }
