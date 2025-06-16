@@ -25,4 +25,5 @@ public interface OrderMapper {
      */
     void update(Orders orders);
 
+    Orders getById(Long id);
 }

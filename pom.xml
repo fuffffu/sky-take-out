@@ -128,6 +128,11 @@
                 <artifactId>spring-boot-starter-cache</artifactId>
                 <version>2.7.3</version> <!-- 可根据你的 Spring Boot 版本调整 -->
             </dependency>
+            <!--WebSocket依赖-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-websocket</artifactId>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
